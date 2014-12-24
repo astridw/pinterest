@@ -1,7 +1,9 @@
-%h1 This is the Show page
-%h2= @pin.title
+%h1= @pin.title
 %p= @pin.description
+%p Submitted by
+= @pin.user.email
 
+%br
 = link_to "All Pins", root_path
 = link_to "Edit Pin", edit_pin_path
-= link_to "Delete Pin", pin_path, method: :delete, data: {confirm: "Are you sure?"}   
+= link_to "Delete Pin", pin_path, method: :delete, data: {confirm: "Are you sure?"}
