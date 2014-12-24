@@ -1,9 +1,11 @@
-%h1= @pin.title
-%p= @pin.description
-%p Submitted by
-= @pin.user.email
+.container
+  %h1= @pin.title
+  %p= image_tag @pin.photo.url(:medium)
+  %p= @pin.description
+  %p Submitted by
+  = @pin.user.email
 
-%br
-= link_to "All Pins", root_path
-= link_to "Edit Pin", edit_pin_path
-= link_to "Delete Pin", pin_path, method: :delete, data: {confirm: "Are you sure?"}
+  %br
+  = link_to "All Pins", root_path
+  = link_to "Edit Pin", edit_pin_path
+  = link_to "Delete Pin", pin_path, method: :delete, data: {confirm: "Are you sure?"}
