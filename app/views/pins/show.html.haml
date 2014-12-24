@@ -1,0 +1,7 @@
+%h1 This is the Show page
+%h2= @pin.title
+%p= @pin.description
+
+= link_to "All Pins", root_path
+= link_to "Edit Pin", edit_pin_path
+= link_to "Delete Pin", pin_path, method: :delete, data: {confirm: "Are you sure?"}   

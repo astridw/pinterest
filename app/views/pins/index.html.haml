@@ -1,1 +1,3 @@
-%h1 This is the index page
+= link_to "Create New Pin", new_pin_path
+- @pins.each do |pin|
+  %ul= link_to pin.title, pin
