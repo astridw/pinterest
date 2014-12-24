@@ -38,6 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'haml'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'simple_form'
 gem 'devise'
