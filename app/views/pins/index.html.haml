@@ -1,3 +1,6 @@
-- @pins.each do |pin|
-  = link_to (image_tag pin.photo.url(:medium)), pin 
-  %ul= link_to pin.title, pin
+#pins.transitions-enabled
+  - @pins.each do |pin|
+    .box.panel.panel-default
+      = link_to (image_tag pin.photo.url()), pin
+      .panel-body
+        %ul= link_to pin.title, pin
