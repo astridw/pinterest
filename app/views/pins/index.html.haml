@@ -4,3 +4,6 @@
       = link_to (image_tag pin.photo.url()), pin
       .panel-body
         %ul= link_to pin.title, pin
+        %p.user
+          Submitted by
+          pin.user.email
