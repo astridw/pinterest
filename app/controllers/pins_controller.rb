@@ -36,6 +36,11 @@ class PinsController < ApplicationController
     redirect_to root_path, notice: "Your pin was sucessfully deleted"
   end
 
+  def upvote
+    @pin.upvote_by current_user
+    redirect_to :back
+  end
+
   private
 
   def pin_params
